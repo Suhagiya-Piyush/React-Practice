@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Style from './Style.module.css';
 
 export const Arrow_Function = () => {
   return (
-    <div>This is Arrow_Function!</div>
+    <div className={Style.box}>This is Arrow_Function!</div>
   )
 }
