@@ -1,0 +1,17 @@
+.foot-ul li:hover span, ul li:hover i{
+    color: #d51243;
+}
+.foot-ul li:hover{
+    padding-left: 5px;
+    transition-duration: 0.4s;
+}
+input::placeholder{
+    font-weight: 600;
+    font-size: 13px;
+}
+.button{
+    background-color: #d51243;
+}
+.footer-bg{
+    background-color: #ededed;
+}

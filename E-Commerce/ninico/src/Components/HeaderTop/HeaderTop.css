@@ -1,0 +1,4 @@
+.shop:hover .arrow{
+    transform: translateX(8px);
+    transition-duration: 0.5s;
+}
