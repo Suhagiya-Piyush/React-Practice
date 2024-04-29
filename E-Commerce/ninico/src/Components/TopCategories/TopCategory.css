@@ -1,0 +1,12 @@
+.cate-lst:hover span{
+    background-color: red;
+    color: white;
+    transition-duration: 0.5s;
+}
+.cate-h1:hover h1{
+    text-decoration: underline;
+    transition-duration: 0.5s;
+}
+.cate div:nth-child(6){
+    border-right: 0 !important;
+}

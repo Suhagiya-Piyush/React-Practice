@@ -1,0 +1,11 @@
+.ban-btn:hover{
+    transition-duration: 0.5s;
+}
+.ban{
+    width: 90% !important;
+}
+.ban:hover img{
+    scale: 1.1;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}

@@ -3,11 +3,13 @@ import logo from "../Assets/logo.png";
 import flag from "../Assets/lang-flag.png";
 import "../Header/Header.css";
 import Category from "../Categories/Category";
+// import { Link } from "react-router-dom";
+// import { Error } from "../Pages/Error";
 
 export const Header = () => {
   return (
     <div className="">
-      <header className="container mx-auto">
+      <header className="px-10">
         <div className="grid grid-cols-3 gap-4 items-center">
           <div className="col-span-2 flex px-4 justify-between">
             <img src={logo} alt="Logo/ninico" className="me-10 h-6" />
@@ -86,14 +88,16 @@ export const Header = () => {
                 <div className="sm:ml-3">
                   <div className="flex space-x-4 cursor-pointer">
                     <div id="home" className="nav-link relative">
-                      <a
+                    <a
                         href="#"
-                        className="rounded-md px-3 my-3 inline-block text-xs font-medium home header-link"
+                        className="rounded-md px-3 my-3 inline-block font-semibold text-sm home header-link"
                       >
                         Home
                         <i className="fa-solid fa-angle-down ms-1 text-slate-500"></i>
                       </a>
-                      <ul className="text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[250%] z-10  border-red-700 border-t-2 py-3">
+                      {/* <Link className="rounded-md px-3 my-3 inline-block text-xs font-medium home header-link" to="/">Home<i className="fa-solid fa-angle-down ms-1 text-slate-500"></i></Link> */}
+
+                      <ul className="text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[250%] z-20  border-red-700 border-t-2 py-3">
                         <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
                           <a href="#">Wooden Home</a>
                         </li>
@@ -113,14 +117,16 @@ export const Header = () => {
                     </div>
 
                     <div id="shop" className="nav-link relative">
-                      <a
+                    <a
                         href="#"
-                        className="rounded-md px-3 my-3 inline-block text-xs font-medium shop header-link"
+                        className="rounded-md px-3 my-3 inline-block text-sm font-semibold shop header-link"
                       >
-                        Shop
+                        Pages
                         <i className="fa-solid fa-angle-down ms-1 text-slate-500"></i>
                       </a>
-                      <ul className="text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[250%] z-10  border-red-700 border-t-2 py-3">
+                    {/* <Link className="rounded-md px-3 my-3 inline-block text-xs font-medium shop header-link" to="/Error">Shop<i className="fa-solid fa-angle-down ms-1 text-slate-500"></i></Link> */}
+                    
+                      <ul className="text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[250%] z-20  border-red-700 border-t-2 py-3">
                         <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
                           <a href="#">Shop</a>
                         </li>
@@ -157,12 +163,12 @@ export const Header = () => {
                     <div id="page" className="nav-link relative">
                       <a
                         href="#"
-                        className="rounded-md px-3 my-3 inline-block text-xs font-medium pages header-link"
+                        className="rounded-md px-3 my-3 inline-block text-sm font-semibold pages header-link"
                       >
                         Pages
                         <i className="fa-solid fa-angle-down ms-1 text-slate-500"></i>
                       </a>
-                      <ul className="flex text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[900%] z-10  border-red-700 border-t-2 py-3">
+                      <ul className="flex text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[900%] z-20  border-red-700 border-t-2 py-3">
                         <ul className="px-3 w-[150%]">
                           <h2 className="pt-2 pb-3 ms-3 hover:text-red-600 font-semibold">
                             PAGE LAYOUT
@@ -226,12 +232,12 @@ export const Header = () => {
                     <div id="blog" className="nav-link relative">
                       <a
                         href="#"
-                        className="rounded-md px-3 my-3 inline-block text-xs font-medium blog header-link"
+                        className="rounded-md px-3 my-3 inline-block text-sm font-semibold blog header-link"
                       >
                         Blog
                         <i className="fa-solid fa-angle-down ms-1 text-slate-500"></i>
                       </a>
-                      <ul className="text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[250%] z-10  border-red-700 border-t-2 py-3">
+                      <ul className="text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[250%] z-20  border-red-700 border-t-2 py-3">
                         <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
                           <a href="#">Blog</a>
                         </li>
@@ -244,18 +250,10 @@ export const Header = () => {
                     <div id="contact" className="nav-link relative">
                       <a
                         href="#"
-                        className="rounded-md px-3 my-3 inline-block text-xs font-medium contact header-link"
+                        className="rounded-md px-3 my-3 inline-block text-sm font-semibold contact header-link"
                       >
                         Contact
                       </a>
-                      {/* <ul className="text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[250%] z-10  border-red-700 border-t-2 py-3">
-                        <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
-                          <a href="#">Blog</a>
-                        </li>
-                        <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
-                          <a href="#">Blog Details</a>
-                        </li>
-                      </ul> */}
                     </div>
                   </div>
                 </div>

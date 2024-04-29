@@ -56,11 +56,3 @@
     text-decoration: underline;
     transition: 1s;
 }
-.ban-btn:hover{
-    transition-duration: 0.5s;
-}
-.ban:hover img{
-    scale: 1.05;
-    transition-duration: 0.5s;
-    cursor: pointer;
-}

@@ -1,17 +1,27 @@
-// import logo from './logo.svg';
-import './App.css';
-import { Footer } from './Components/Footer/Footer';
-import { Header } from './Components/Header/Header';
-import { HeaderTop } from './Components/HeaderTop/HeaderTop';
-import { Slider } from './Components/Slider/Slider';
+import "./App.css";
+import React from "react";
+// import { HeaderTop } from "./Components/HeaderTop/HeaderTop";
+// import { Header } from "./Components/Header/Header";
+// import { Slider } from "./Components/Slider/Slider";
+// import { TopCategory } from "./Components/TopCategories/TopCategory";
+// import { Product } from "./Components/Product/Product";
+// import { Abstract } from "./Components/Abstract/Abstract";
+// import { NinicoShop } from "./Components/Ninico-shop/NinicoShop";
+// import { Footer } from "./Components/Footer/Footer";
+import Error from "./Components/Pages/Error";
 
 function App() {
   return (
-    <div className="App">
-      <HeaderTop/>
+    <div className="App container mx-auto">
+      {/* <HeaderTop/>
       <Header/>
       <Slider/>
-      <Footer/>
+      <TopCategory/>
+      <Product/>
+      <Abstract/>
+      <NinicoShop/>
+      <Footer/> */}
+      <Error/>
     </div>
   );
 }
