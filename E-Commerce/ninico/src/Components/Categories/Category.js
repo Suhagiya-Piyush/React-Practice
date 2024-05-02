@@ -10,7 +10,7 @@ const Category = () => {
       <div className="px-8 py-2 flex items-center Categories font-semibold text-white text-sm cursor-pointer rounded-t-lg" onClick={showList}>
         <i className="fa-solid fa-bars me-4 text-lg"></i>Categories
       </div>
-      <div className="absolute z-20 bg-white w-full rounded-b-lg overflow-hidden shadow-xl" id="Category-lst">
+      <div className="absolute hidden md:visible z-20 bg-white w-full rounded-b-lg overflow-hidden shadow-xl" id="Category-lst">
         <ul className="text-xs text-start font-medium categories-lst w-full">
           <li className="py-3 ps-8">
             <span className="">

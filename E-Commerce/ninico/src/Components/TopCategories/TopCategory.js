@@ -18,7 +18,7 @@ export const TopCategory = () => {
                   {cValue.num}
                 </span>
               </div>
-              <div className="mt-4 cate-h1">
+              <div className="mt-4 cate-h1 text-center">
                 <h1 className="cursor-pointer text-lg">
                   {cValue.text1}<br/>{cValue.text2}
                 </h1>

@@ -1,0 +1,70 @@
+.main-data:hover {
+    z-index: 11;
+    overflow-y: visible;
+}
+
+.img-data {
+    position: relative;
+    opacity: 1;
+}
+
+.sec-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.img-data:hover .sec-img{
+    opacity: 1;
+}
+
+.img-data:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.blue, .red, .orange, .purple{
+    display: block;
+    height: 15px !important;
+    width: 15px !important;
+    background-color: skyblue;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-inline: 1px;
+}
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+}
+.purple{
+    background-color: purple;
+}
+
+.blue:hover {
+    outline: 1px solid skyblue;
+    border: 4px solid white;
+    transition: 0.3s ease-in-out;
+}
+.red:hover {
+    outline: 1px solid red;
+    border: 4px solid white;
+    transition: 0.3s ease-in-out;
+}
+.orange:hover {
+    outline: 1px solid orange;
+    border: 4px solid white;
+    transition: 0.3s ease-in-out;
+}
+.purple:hover {
+    outline: 1px solid purple;
+    border: 4px solid white;
+    transition: 0.3s ease-in-out;
+}
+
+.img-data:hover .dots{
+    opacity: 1 !important;
+}

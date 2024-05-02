@@ -18,7 +18,7 @@ import Slid6 from "../Assets/instagram06.jpg";
 
 export const NinicoShop = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 mx-10">
       <h5 className="text-red-600 text-lg">Follow On</h5>
       <h2 className="text-4xl font-bold">
         <i class="fa-brands fa-instagram"></i> ninico-shop
