@@ -4,8 +4,6 @@ import flag from "../Assets/lang-flag.png";
 import "../Header/Header.css";
 import Category from "../Categories/Category";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
-// import { Error } from "../Pages/Error";
 
 export const Header = () => {
   return (
@@ -66,7 +64,7 @@ export const Header = () => {
                   </span>
                 </button>
                 <button>
-                  <i className="fa-regular fa-user text-xl"></i>
+                  <Link to="/signin"><i className="fa-regular fa-user text-xl"></i></Link>
                 </button>
                 <button className="relative">
                   <i className="fa-regular fa-heart text-xl"></i>
@@ -122,7 +120,7 @@ export const Header = () => {
                           href="#"
                           className="rounded-md px-3 my-3 inline-block text-sm font-semibold shop header-link"
                         >
-                          Pages
+                          Shop
                           <i className="fa-solid fa-angle-down ms-1 text-slate-500"></i>
                         </a>
                         {/* <Link className="rounded-md px-3 my-3 inline-block text-xs font-medium shop header-link" to="/Error">Shop<i className="fa-solid fa-angle-down ms-1 text-slate-500"></i></Link> */}
@@ -204,10 +202,10 @@ export const Header = () => {
                               <a href="#">Checkout</a>
                             </li>
                             <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all">
-                              <a href="#">Sign In</a>
+                              <Link to="/signin">Sign In</Link>
                             </li>
                             <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all">
-                              <a href="#">Log In</a>
+                              <Link to="/signin">Log In</Link>
                             </li>
                           </ul>
                           <ul className="px-3 w-[150%]">
