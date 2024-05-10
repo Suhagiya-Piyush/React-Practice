@@ -64,10 +64,14 @@ export const Header = () => {
                   </span>
                 </button>
                 <button>
-                  <Link to="/signin"><i className="fa-regular fa-user text-xl"></i></Link>
+                  <Link to="/signin">
+                    <i className="fa-regular fa-user text-xl"></i>
+                  </Link>
                 </button>
                 <button className="relative">
-                  <i className="fa-regular fa-heart text-xl"></i>
+                  <Link to="/wishlist">
+                    <i className="fa-regular fa-heart text-xl"></i>
+                  </Link>
                   <span className="absolute bg-red-600 h-4 w-4 rounded-full text-xs text-white flex items-center justify-center bottom-4 left-3">
                     0
                   </span>
@@ -98,7 +102,7 @@ export const Header = () => {
 
                         <ul className="text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[250%] z-20  border-red-700 border-t-2 py-3">
                           <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
-                            <a href="#">Wooden Home</a>
+                            <Link to="/">Wooden Home</Link>
                           </li>
                           <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
                             <a href="#">Fashion Home</a>
@@ -116,14 +120,13 @@ export const Header = () => {
                       </div>
 
                       <div id="shop" className="nav-link relative">
-                        <a
-                          href="#"
-                          className="rounded-md px-3 my-3 inline-block text-sm font-semibold shop header-link"
+                        <Link
+                          to="/shop"
+                          className="rounded-md px-3 my-3 inline-block text-sm font-medium shop header-link"
                         >
                           Shop
                           <i className="fa-solid fa-angle-down ms-1 text-slate-500"></i>
-                        </a>
-                        {/* <Link className="rounded-md px-3 my-3 inline-block text-xs font-medium shop header-link" to="/Error">Shop<i className="fa-solid fa-angle-down ms-1 text-slate-500"></i></Link> */}
+                        </Link>
 
                         <ul className="text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[250%] z-20  border-red-700 border-t-2 py-3">
                           <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
@@ -145,13 +148,13 @@ export const Header = () => {
                             <a href="#">Cart</a>
                           </li>
                           <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
-                            <a href="#">Sign In</a>
+                            <Link to="/signin">Sign In</Link>
                           </li>
                           <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
                             <a href="#">Checkout</a>
                           </li>
                           <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
-                            <a href="#">Wishlist</a>
+                            <Link to="/wishlist">Wishlist</Link>
                           </li>
                           <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
                             <a href="#">Product Track</a>
@@ -193,7 +196,7 @@ export const Header = () => {
                               PAGE LAYOUT
                             </h2>
                             <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all">
-                              <a href="#">About</a>
+                              <Link to="/about">About</Link>
                             </li>
                             <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all">
                               <a href="#">Cart</a>
@@ -205,7 +208,7 @@ export const Header = () => {
                               <Link to="/signin">Sign In</Link>
                             </li>
                             <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all">
-                              <Link to="/signin">Log In</Link>
+                              <Link to="/login">Log In</Link>
                             </li>
                           </ul>
                           <ul className="px-3 w-[150%]">
@@ -216,7 +219,7 @@ export const Header = () => {
                               <a href="#">Product Track</a>
                             </li>
                             <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all">
-                              <a href="#">Wishlist</a>
+                              <Link to="/wishlist">Wishlist</Link>
                             </li>
                             <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all">
                               <Link to="/*">404 / Error</Link>

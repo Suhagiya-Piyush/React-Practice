@@ -1,5 +1,6 @@
 import React from "react";
 import productData from "./ProductData";
+import { Link, useParams } from 'react-router-dom';
 import "./Product.css";
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
@@ -33,6 +34,7 @@ export const Product = () => {
           return (
             <div className="sm:h-[20rem] md:h-[24rem] lg:h-[23rem] mr-2 main-data relative overflow-y-hidden z-10">
               <div className="img-data p-4 absolute z-10 bg-white rounded-lg">
+                <Link to={`/product/${value.id}`}>
                 <div className="hover:rounded-lg ">
                   <img src={value.img} alt="Image1" className="rounded-lg " />
                   <div className="sec-img  p-4">
@@ -44,7 +46,7 @@ export const Product = () => {
                   </div>
                   <div className="text-left mt-4">
                     <h1 className="text-gray-500">{value.title}</h1>
-                    <p className="font-semibold">{value.rate}</p>
+                    <p className="font-semibold">${value.rate}</p>
                   </div>
                   <div className="mt-4 opacity-0 dots flex justify-between">
                     <div className="flex items-center">
@@ -63,6 +65,7 @@ export const Product = () => {
                     </div>
                   </div>
                 </div>
+                </Link>
               </div>
             </div>
           );

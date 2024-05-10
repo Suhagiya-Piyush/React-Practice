@@ -25,71 +25,102 @@ const productData = [
         id : 1,
         img : img1,
         title : "Bradley Burgess 2",
-        rate : "$20.00",        
-        img2 : img_1
+        rate : 20.00,        
+        img2 : img_1,
+        dis_1 : "Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23.",
+        dis_2 : "It is a completely modern design and you feel comfortable to put on this hijab.",
+        dis_3 : "Buy it at the best price."
     },
     {
         id : 2,
         img : img2,
         title : "Allie Sharp",
-        rate : "$30.00",        
-        img2 : img_2
+        rate : 30.00,        
+        img2 : img_2,
+        dis_1 : "Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23.",
+        dis_2 : "It is a completely modern design and you feel comfortable to put on this hijab.",
+        dis_3 : "Buy it at the best price."
     },
     {
         id : 3,
         img : img3,
         title : "Nathaniel Baldwin",
-        rate : "$40.00",        
-        img2 : img_3
+        rate : 40.00,        
+        img2 : img_3,
+        dis_1 : "Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23.",
+        dis_2 : "It is a completely modern design and you feel comfortable to put on this hijab.",
+        dis_3 : "Buy it at the best price."
     },
     {
         id : 4,
         img : img4,
         title : "Effie Rios",
-        rate : "$40.00",        
-        img2 : img_4
+        rate : 40.00,        
+        img2 : img_4,
+        dis_1 : "Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23.",
+        dis_2 : "It is a completely modern design and you feel comfortable to put on this hijab.",
+        dis_3 : "Buy it at the best price."
     },
     {
         id : 5,
         img : img5,
         title : "Carolyn Goodwin",
-        rate : "$50.00",        
-        img2 : img_5
+        rate : 50.00,        
+        img2 : img_5,
+        dis_1 : "Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23.",
+        dis_2 : "It is a completely modern design and you feel comfortable to put on this hijab.",
+        dis_3 : "Buy it at the best price."
     },
     {
         id : 6,
         img : img6,
         title : "Evelyn Patton",
-        rate : "$60.00",
-        img2 : img_6
+        rate : 60.00,
+        img2 : img_6,
+        dis_1 : "Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23.",
+        dis_2 : "It is a completely modern design and you feel comfortable to put on this hijab.",
+        dis_3 : "Buy it at the best price."
     },
     {
         id : 7,
         img : img7,
         title : "Sally Ray",
-        rate : "$70.00",
-        img2 : img_7
+        rate : 70.00,
+        img2 : img_7,
+        dis_1 : "Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23.",
+        dis_2 : "It is a completely modern design and you feel comfortable to put on this hijab.",
+        dis_3 : "Buy it at the best price."
     },
     {
         id : 8,
         img : img8,
         title : "Ora Bowman",
-        rate : "$80.00",
-        img2 : img_8
+        rate : 80.00,
+        img2 : img_8,
+        dis_1 : "Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23.",
+        dis_2 : "It is a completely modern design and you feel comfortable to put on this hijab.",
+        dis_3 : "Buy it at the best price."
     },
     {
         id : 9,
         img : img9,
         title : "Frederick Valdez",
-        rate : "$90.00",
-        img2 : img_9
+        rate : 90.00,
+        img2 : img_9,
+        dis_1 : "Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23.",
+        dis_2 : "It is a completely modern design and you feel comfortable to put on this hijab.",
+        dis_3 : "Buy it at the best price."
+
     },
     {
         id : 10,
         img : img10,
         title : "Terry Byrd",
-        rate : "$100.00",
-        img2 : img_10
+        rate : 100.00,
+        img2 : img_10,
+        dis_1 : "Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23.",
+        dis_2 : "It is a completely modern design and you feel comfortable to put on this hijab.",
+        dis_3 : "Buy it at the best price."
         
     },
 ]

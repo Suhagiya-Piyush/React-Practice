@@ -1,0 +1,17 @@
+/* .link{
+    position: relative;
+    transition: 0.3s;
+}
+.link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 7%;
+    width: 0;
+    transition: 0.5s;
+}
+.link:hover::after, .link:focus::after{
+    background-color: #696969;
+    width: 100%;
+} */

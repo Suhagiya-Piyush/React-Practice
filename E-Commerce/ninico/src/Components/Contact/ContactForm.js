@@ -51,14 +51,14 @@ export const ContactForm = () => {
           <div className="col-span-2 p-2">
             <h2 className="text-2xl font-bold mb-2">Make Custom Request</h2>
             <p className="text-sm text-gray-500">Must-have pieces selected every month want style Ideas and Treats?</p>
-            <form action="" className="mt-8">
+            <form action="https://formspree.io/f/mzbnoloa" method="POST" className="mt-8">
               <div className="grid grid-cols-2 gap-6 mb-4">
-                <input type="text" placeholder="Full name" className="border rounded-lg px-4 py-3 text-lg focus:border-red-600 focus:outline-none"/>
-                <input type="text" placeholder="Email address" className="border rounded-lg px-4 py-3 text-lg focus:border-red-600 focus:outline-none"/>
+                <input type="text" name="fullname" placeholder="Full name" className="border rounded-lg px-4 py-3 text-lg focus:border-red-600 focus:outline-none"/>
+                <input type="text" name="email" placeholder="Email address" className="border rounded-lg px-4 py-3 text-lg focus:border-red-600 focus:outline-none"/>
               </div>
               <div className="grid grid-cols-2 gap-6 mb-4">
-                <input type="text" placeholder="Phone number" className="border rounded-lg px-4 py-3 text-lg focus:border-red-600 focus:outline-none"/>
-                <input type="text" placeholder="Subject" className="border rounded-lg px-4 py-3 text-lg focus:border-red-600 focus:outline-none"/>
+                <input type="text" name="phonenumber" placeholder="Phone number" className="border rounded-lg px-4 py-3 text-lg focus:border-red-600 focus:outline-none"/>
+                <input type="text" name="subject" placeholder="Subject" className="border rounded-lg px-4 py-3 text-lg focus:border-red-600 focus:outline-none"/>
               </div>
               <div className="grid grid-cols-1 mb-6">
                 <textarea name="message" id="" cols="30" rows="9" placeholder="Enter message" className="border rounded-lg px-4 py-3  focus:border-red-600 focus:outline-none"></textarea>
