@@ -3,9 +3,20 @@ import logo from "../Assets/logo.png";
 import flag from "../Assets/lang-flag.png";
 import "../Header/Header.css";
 import Category from "../Categories/Category";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import { useSelector } from "react-redux";
+
+//Icons
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { FaRegUser } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 
 export const Header = () => {
+  const navigate = useNavigate();
+
+  const data = useSelector((state) => state.cartreducer.carts)
+  const data2 = useSelector((state) => state.WishList.wishlist)
   return (
     <div className="">
       <header className="px-10">
@@ -57,23 +68,21 @@ export const Header = () => {
                 </select>
               </div>
               <div className="min-w-[30%] flex justify-around ms-auto">
-                <button className="relative">
-                  <i className="fa-solid fa-cart-shopping text-xl"></i>
+                <button className="relative" onClick={() => navigate("/addtocart")}>
+                  <MdOutlineShoppingCart className="text-2xl"/>
                   <span className="absolute bg-red-600 h-4 w-4 rounded-full text-xs text-white flex items-center justify-center bottom-4 left-3">
-                    0
+                    {data.length}
                   </span>
                 </button>
                 <button>
                   <Link to="/signin">
-                    <i className="fa-regular fa-user text-xl"></i>
+                    <FaRegUser className="text-xl" />
                   </Link>
                 </button>
-                <button className="relative">
-                  <Link to="/wishlist">
-                    <i className="fa-regular fa-heart text-xl"></i>
-                  </Link>
+                <button className="relative" onClick={() => navigate("/wishlist")}>
+                    <FaRegHeart className="text-xl" />
                   <span className="absolute bg-red-600 h-4 w-4 rounded-full text-xs text-white flex items-center justify-center bottom-4 left-3">
-                    0
+                    {data2.length}
                   </span>
                 </button>
               </div>

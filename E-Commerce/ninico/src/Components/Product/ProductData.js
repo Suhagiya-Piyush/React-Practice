@@ -23,6 +23,7 @@ import img_10 from "../Assets/product20.jpg";
 const productData = [
     {
         id : 1,
+        qty : 1,
         img : img1,
         title : "Bradley Burgess 2",
         rate : 20.00,        
@@ -33,6 +34,7 @@ const productData = [
     },
     {
         id : 2,
+        qty : 1,
         img : img2,
         title : "Allie Sharp",
         rate : 30.00,        
@@ -43,6 +45,7 @@ const productData = [
     },
     {
         id : 3,
+        qty : 1,
         img : img3,
         title : "Nathaniel Baldwin",
         rate : 40.00,        
@@ -53,6 +56,7 @@ const productData = [
     },
     {
         id : 4,
+        qty : 1,
         img : img4,
         title : "Effie Rios",
         rate : 40.00,        
@@ -63,6 +67,7 @@ const productData = [
     },
     {
         id : 5,
+        qty : 1,
         img : img5,
         title : "Carolyn Goodwin",
         rate : 50.00,        
@@ -73,6 +78,7 @@ const productData = [
     },
     {
         id : 6,
+        qty : 1,
         img : img6,
         title : "Evelyn Patton",
         rate : 60.00,
@@ -83,6 +89,7 @@ const productData = [
     },
     {
         id : 7,
+        qty : 1,
         img : img7,
         title : "Sally Ray",
         rate : 70.00,
@@ -93,6 +100,7 @@ const productData = [
     },
     {
         id : 8,
+        qty : 1,
         img : img8,
         title : "Ora Bowman",
         rate : 80.00,
@@ -103,6 +111,7 @@ const productData = [
     },
     {
         id : 9,
+        qty : 1,
         img : img9,
         title : "Frederick Valdez",
         rate : 90.00,
@@ -114,6 +123,7 @@ const productData = [
     },
     {
         id : 10,
+        qty : 1,
         img : img10,
         title : "Terry Byrd",
         rate : 100.00,

@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { PageHeading } from "../PageHeading/PageHeading";
+import { HeaderTop } from "../HeaderTop/HeaderTop";
+import { Header } from "../Header/Header";
+import { Footer } from "../Footer/Footer";
 
 import { useSelector, useDispatch } from "react-redux";
-import { incr_Qty, dec_Qty, AddCart, RemoveItem } from "../Action/Action";
-import { Link, useNavigate } from "react-router-dom";
+import { incr_Qty } from "../Action/Action";
+import { dec_Qty } from "../Action/Action";
+import { RemoveItem } from "../Action/Action";
 
 import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
 
-export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
-  const navigate = useNavigate();
-  const wishlistData = useSelector((state) => state.WishList.wishlist);
-  const product_Data = { fstImg, secImg, name, rate, qty, id };
+export const AddtoCart = () => {
+  const data = useSelector((state) => state.cartreducer.carts);
   const disp = useDispatch();
-  const Send = (e) => {
-    disp(AddCart(e));
-  };
   const incCount = (item) => {
     disp(incr_Qty(item));
   };
@@ -24,10 +23,11 @@ export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
   const Remove = (id) => {
     disp(RemoveItem(id));
   };
-
   return (
     <div>
-      <PageHeading goBacklink="Home" pageTitle="Wishlist" />
+      <HeaderTop />
+      <Header />
+      <PageHeading goBacklink="Home" pageTitle="Add To Cart" />
       <div className="table-content px-10">
         <table className="table-auto w-full border my-20">
           <thead>
@@ -37,12 +37,11 @@ export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
               <th className="border">Unit Price</th>
               <th className="border">Quantity</th>
               <th className="border">Totle</th>
-              <th className="border">Add To Cart</th>
               <th className="border">Remove</th>
             </tr>
           </thead>
           <tbody>
-            {wishlistData.map((currentVal, idx) => {
+            {data.map((currentVal, idx) => {
               let { name, fstImg, rate, id, qty } = currentVal;
               // console.log(currentVal);
               return (
@@ -65,36 +64,24 @@ export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
                     <span className="flex border px-4 py-2 rounded-lg">
                       {qty}
                       <div className="ms-auto my-auto hover:bg-gray-400">
-                        <button
-                          className="block border border-white"
-                          onClick={() => incCount(currentVal)}
-                        >
+                        <button className="block border border-white" onClick={() => incCount(currentVal)}>
                           <MdArrowDropUp />
                         </button>
-                        <button
-                          className="block border border-white"
-                          onClick={() => decCount(currentVal)}
-                        >
+                        <button className="block border border-white" onClick={() => decCount(currentVal)}>
                           <MdArrowDropDown />
                         </button>
                       </div>
                     </span>
                   </td>
                   <td className="border text-center">${qty * rate}</td>
-                  <td className="text-center">
-                    <button className="py-3 px-8 bg-rose-600 text-white font-semibold rounded-lg"  onClick={() => Send(product_Data)}>
-                      Add to Cart
-                    </button>
-                  </td>
-                  <td className="border text-center">
-                    <button onClick={() => Remove(id)}>Remove</button>
-                  </td>
+                  <td className="border text-center"><button onClick={() => Remove(id)}>Remove</button></td>
                 </tr>
               );
             })}
           </tbody>
         </table>
       </div>
+      <Footer />
     </div>
   );
 };
