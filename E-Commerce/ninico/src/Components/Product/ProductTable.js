@@ -38,11 +38,9 @@ export const ProductTable = ({ id, qty, fstImg, secImg, name, rate }) => {
                 <button className="mx-2 hover:text-black transition-all">
                   <FaRegEye />
                 </button>
-                {/* <Link to={`/wishlist/${id}`}> */}
                   <button className="mx-4 hover:text-black transition-all">
                     <FaRegHeart onClick={() => Send_W(product_Data)}/>
                   </button>
-                {/* </Link> */}
               </div>
             </div>
             <div className="text-left mt-4">

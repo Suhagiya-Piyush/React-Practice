@@ -43,7 +43,6 @@ export const AddtoCart = () => {
           <tbody>
             {data.map((currentVal, idx) => {
               let { name, fstImg, rate, id, qty } = currentVal;
-              // console.log(currentVal);
               return (
                 <tr key={idx} className="border">
                   <td className="border py-6">

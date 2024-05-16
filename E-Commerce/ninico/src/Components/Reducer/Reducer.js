@@ -27,7 +27,7 @@ export const cartreducer = (state = initial_state, action) => {
                     }
                     return item
                 })
-                console.log("list",newList);
+                // console.log("list",newList);
                 return {...state,carts : newList}
             }
         case "DEC_COUNT":
@@ -41,7 +41,7 @@ export const cartreducer = (state = initial_state, action) => {
                     }
                     return item
                 })
-                console.log("list",newList);
+                // console.log("list",newList);
                 return {...state,carts : newList}
             }
         default :
@@ -72,7 +72,7 @@ export const WishList = (state = initial_state, action) => {
                         }
                         return item
                     })
-                    console.log("list",newList);
+                    // console.log("list",newList);
                     return {...state,wishlist : newList}
                 }
             case "DEC_COUNT":
@@ -86,7 +86,7 @@ export const WishList = (state = initial_state, action) => {
                         }
                         return item
                     })
-                    console.log("list",newList);
+                    // console.log("list",newList);
                     return {...state,wishlist : newList}
                 }
         default :

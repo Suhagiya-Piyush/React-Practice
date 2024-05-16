@@ -10,7 +10,6 @@ import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
 export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
   const navigate = useNavigate();
   const wishlistData = useSelector((state) => state.WishList.wishlist);
-  // const product_Data = { fstImg, secImg, name, rate, qty, id };
   const disp = useDispatch();
   const Send = (e) => {
     disp(AddCart(e));
@@ -45,7 +44,6 @@ export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
           <tbody>
             {wishlistData.map((currentVal, idx) => {
               let { name, fstImg, rate, id, qty } = currentVal;
-              // console.log(currentVal);
               return (
                 <tr key={idx} className="border">
                   <td className="border py-6">
