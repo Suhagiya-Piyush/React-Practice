@@ -11,7 +11,7 @@ export const cartreducer = (state = initial_state, action) => {
                 carts : [...state.carts, action.payload]
             }
         case "REMOVE_TO_CART":
-            const data = state.carts.filter((e) => e.value.id !== action.payload)
+            const data = state.carts.filter((e) => e.id !== action.payload)
             return{
                 ...state,
                 carts : data,
@@ -56,7 +56,7 @@ export const WishList = (state = initial_state, action) => {
                 wishlist : [...state.wishlist, action.payload]
             }
         case "REMOVE_TO_WISHLIST":
-            const data = state.wishlist.filter((e) => e.value.id !== action.payload)
+            const data = state.wishlist.filter((e) => e.id !== action.payload)
             return{
                 ...state,
                 wishlist : data,

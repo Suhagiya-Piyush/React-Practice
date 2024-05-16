@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { PageHeading } from "../PageHeading/PageHeading";
 
 import { useSelector, useDispatch } from "react-redux";
-import { incr_Qty, dec_Qty, AddCart, RemoveItem } from "../Action/Action";
+import { incr_Qty, dec_Qty, AddCart, RemoveList } from "../Action/Action";
 import { Link, useNavigate } from "react-router-dom";
 
 import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
@@ -10,10 +10,11 @@ import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
 export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
   const navigate = useNavigate();
   const wishlistData = useSelector((state) => state.WishList.wishlist);
-  const product_Data = { fstImg, secImg, name, rate, qty, id };
+  // const product_Data = { fstImg, secImg, name, rate, qty, id };
   const disp = useDispatch();
   const Send = (e) => {
     disp(AddCart(e));
+    disp(RemoveList(e.id));
   };
   const incCount = (item) => {
     disp(incr_Qty(item));
@@ -22,7 +23,7 @@ export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
     disp(dec_Qty(item));
   };
   const Remove = (id) => {
-    disp(RemoveItem(id));
+    disp(RemoveList(id));
   };
 
   return (
@@ -82,7 +83,7 @@ export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
                   </td>
                   <td className="border text-center">${qty * rate}</td>
                   <td className="text-center">
-                    <button className="py-3 px-8 bg-rose-600 text-white font-semibold rounded-lg"  onClick={() => Send(product_Data)}>
+                    <button className="py-3 px-8 bg-rose-600 text-white font-semibold rounded-lg"  onClick={() => Send(currentVal)}>
                       Add to Cart
                     </button>
                   </td>

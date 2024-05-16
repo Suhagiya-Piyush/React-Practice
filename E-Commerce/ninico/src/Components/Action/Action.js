@@ -18,6 +18,13 @@ export const RemoveItem = (id) => {
     }
 }
 
+export const RemoveList = (id) => {
+    return{
+        type : "REMOVE_TO_WISHLIST",
+        payload : id
+    }
+}
+
 export const incr_Qty = (item) => {
     return{
         type : "INC_COUNT",
