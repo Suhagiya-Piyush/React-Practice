@@ -139,7 +139,7 @@ export const Header = () => {
 
                         <ul className="text-start ps-2 rounded-b-lg bg-white text-sm link-lst absolute w-[250%] z-20  border-red-700 border-t-2 py-3">
                           <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
-                            <a href="#">Shop</a>
+                            <Link to="/shop">Shop</Link>
                           </li>
                           <li className="py-2 ms-3 hover:text-red-600 hover:ms-4 transition-all font-semibold">
                             <a href="#">Shop 2</a>

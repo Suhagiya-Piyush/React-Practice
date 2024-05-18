@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
 
-export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
+export const Wishlist = () => {
   const navigate = useNavigate();
   const wishlistData = useSelector((state) => state.WishList.wishlist);
   const disp = useDispatch();
@@ -43,12 +43,12 @@ export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
           </thead>
           <tbody>
             {wishlistData.map((currentVal, idx) => {
-              let { name, fstImg, rate, id, qty } = currentVal;
+              let { title, img, rate, id, qty } = currentVal;
               return (
                 <tr key={idx} className="border">
                   <td className="border py-6">
                     <a href="#" className="flex justify-center">
-                      <img src={fstImg} alt="Product1" className="w-32" />
+                      <img src={img} alt="Product1" className="w-32" />
                     </a>
                   </td>
                   <td className="border text-center">
@@ -56,7 +56,7 @@ export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
                       href="#"
                       className="font-bold hover:text-rose-600 transition-all"
                     >
-                      {name}
+                      {title}
                     </a>
                   </td>
                   <td className="border text-center">${rate}</td>
@@ -81,7 +81,10 @@ export const Wishlist = ({ id, qty, fstImg, secImg, name, rate }) => {
                   </td>
                   <td className="border text-center">${qty * rate}</td>
                   <td className="text-center">
-                    <button className="py-3 px-8 bg-rose-600 text-white font-semibold rounded-lg"  onClick={() => Send(currentVal)}>
+                    <button
+                      className="py-3 px-8 bg-rose-600 text-white font-semibold rounded-lg"
+                      onClick={() => Send(currentVal)}
+                    >
                       Add to Cart
                     </button>
                   </td>

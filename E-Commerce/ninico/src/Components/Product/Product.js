@@ -31,7 +31,7 @@ export const Product = () => {
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4">
         {productData.map((value, ind, array) => {
           return (
-            <ProductTable key={ind} qty={value.qty} id={value.id} fstImg={value.img} secImg={value.img2} name={value.title} rate={value.rate} />
+            <ProductTable key={ind} qty={value.qty} id={value.id} img={value.img} img2={value.img2} title={value.title} rate={value.rate} />
           );
         })}
       </div>

@@ -1,13 +1,21 @@
 import React from "react";
 import { useParams } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { AddCart } from "../Action/Action";
+
 import productData from "../Product/ProductData"
 import { PageHeading } from "../PageHeading/PageHeading";
 import { IoCartOutline } from "react-icons/io5";
 
 
-export const Pro_Details = (props) => {
-  let { id } = useParams();
-  let product = productData.find((item) => item.id === parseInt(id));
+export const Pro_Details = () => {
+  let Id  = useParams();
+  let product = productData.find((item) => item.id === parseInt(Id.id));
+  const dispatch = useDispatch();
+  const Send = (e) => {
+    dispatch(AddCart(e));
+  };
+  console.log(product);
   return (
     <>
       <PageHeading goBacklink="Home" pageTitle="Shop Details" />
@@ -25,7 +33,7 @@ export const Pro_Details = (props) => {
           <p className="mt-8 text-gray-500 font-semibold ">
             {product.dis_1}<br/> {product.dis_2}<br/> {product.dis_3}
           </p>
-          <button className="flex items-center border py-4 px-8 mt-4 rounded-lg font-semibold text-white bg-rose-600"><IoCartOutline className="me-2 text-lg"/>Add To Cart</button>
+          <button className="flex items-center border py-4 px-8 mt-4 rounded-lg font-semibold text-white bg-rose-600" onClick={() => Send(product)} ><IoCartOutline className="me-2 text-lg"/>Add To Cart</button>
         </div>
       </div>
     </>

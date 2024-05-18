@@ -13,6 +13,7 @@ import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
 
 export const AddtoCart = () => {
   const data = useSelector((state) => state.cartreducer.carts);
+  // console.log("Data",data);
   const disp = useDispatch();
   const incCount = (item) => {
     disp(incr_Qty(item));
@@ -42,12 +43,12 @@ export const AddtoCart = () => {
           </thead>
           <tbody>
             {data.map((currentVal, idx) => {
-              let { name, fstImg, rate, id, qty } = currentVal;
+              let { title, img, rate, id, qty } = currentVal;
               return (
                 <tr key={idx} className="border">
                   <td className="border py-6">
                     <a href="#" className="flex justify-center">
-                      <img src={fstImg} alt="Product1" className="w-32" />
+                      <img src={img} alt="Product1" className="w-32" />
                     </a>
                   </td>
                   <td className="border text-center">
@@ -55,7 +56,7 @@ export const AddtoCart = () => {
                       href="#"
                       className="font-bold hover:text-rose-600 transition-all"
                     >
-                      {name}
+                      {title}
                     </a>
                   </td>
                   <td className="border text-center">${rate}</td>
