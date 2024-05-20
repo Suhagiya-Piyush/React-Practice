@@ -2,6 +2,11 @@ import React from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { AddCart, AddList } from "../Action/Action";
+import { useSelector } from "react-redux";
+
+
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 //Icons
 import { CiStar } from "react-icons/ci";
@@ -9,14 +14,20 @@ import { LuShoppingBasket } from "react-icons/lu";
 import { FaStar, FaRegEye, FaRegHeart } from "react-icons/fa";
 
 export const ProductTable = (product_Data) => {
+  const data = useSelector((state) => state.cartreducer.carts);
+  const data2 = useSelector((state) => state.WishList.wishlist);
   const navigate = useNavigate();
   const { img, img2, title, rate, qty, id } = product_Data;
   const dispatch = useDispatch();
   const Send = (e) => {
     dispatch(AddCart(e));
+    let find = data.findIndex(item => item.id ===e.id);
+    find === -1 ? toast.success("This item is Added to Cart") : toast.error("This item is Already in the Cart");
   };
   const Send_W = (e) => {
     dispatch(AddList(e));
+    let find = data2.findIndex(item => item.id ===e.id);
+    find === -1 ? toast.success("This item is Added to Wishlist") : toast.error("This item is Already in the Wishlist");
   };
   return (
     <>

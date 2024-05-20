@@ -1,97 +1,103 @@
 const initial_state = {
-    carts : [],
-    wishlist : []
-}
+  carts: [],
+  wishlist: [],
+};
 
 export const cartreducer = (state = initial_state, action) => {
-    switch (action.type) {
-        case "ADD_TO_CART":{
-            state.carts = state.carts.filter((item) => item.id !== action.payload.id)
-            return{
-                ...state,
-                carts : [...state.carts, action.payload]
-            }
+  switch (action.type) {
+    case "ADD_TO_CART": {
+      state.carts = state.carts.filter((item) => item.id !== action.payload.id);
+      return {
+        ...state,
+        carts: [...state.carts, action.payload],
+      };
+    }
+    case "REMOVE_TO_CART":
+      const data = state.carts.filter((e) => e.id !== action.payload);
+      return {
+        ...state,
+        carts: data,
+      };
+    case "INC_COUNT": {
+      let newList = state.carts.map((item) => {
+        if (item.id == action.payload.id) {
+          return {
+            ...item,
+            qty: item.qty + 1,
+          };
         }
-        case "REMOVE_TO_CART":
-            const data = state.carts.filter((e) => e.id !== action.payload)
-            return{
-                ...state,
-                carts : data,
-            }
-        case "INC_COUNT":
-            {
-                let newList = state.carts.map((item)=>{
-                    if(item.id == action.payload.id){
-                        return{
-                            ...item,
-                            qty : item.qty + 1
-                        }           
-                    }
-                    return item
-                })
-                // console.log("list",newList);
-                return {...state,carts : newList}
-            }
-        case "DEC_COUNT":
-            {
-                let newList = state.carts.map((item)=>{
-                    if(item.id == action.payload.id){
-                        return{
-                            ...item,
-                            qty : item.qty - 1
-                        }           
-                    }
-                    return item
-                })
-                // console.log("list",newList);
-                return {...state,carts : newList}
-            }
-        default :
-        return state;
+        return item;
+      });
+      // console.log("list",newList);
+      return { ...state, carts: newList };
     }
-}
+    case "DEC_COUNT": {
+      let newList = state.carts;
+      if (action.payload.qty !== 1) {
+        newList = state.carts.map((item) => {
+          if (item.id == action.payload.id) {
+            return {
+              ...item,
+              qty: item.qty - 1,
+            };
+          }
+          return item;
+        });
+      }
+      // console.log("list",newList);
+      return { ...state, carts: newList };
+    }
+    default:
+      return state;
+  }
+};
 export const WishList = (state = initial_state, action) => {
-    switch (action.type) {
-        case "ADD_TO_WISHLIST":
-            return{
-                ...state,
-                wishlist : [...state.wishlist, action.payload]
-            }
-        case "REMOVE_TO_WISHLIST":
-            const data = state.wishlist.filter((e) => e.id !== action.payload)
-            return{
-                ...state,
-                wishlist : data,
-            }
-            case "INC_COUNT":
-                {
-                    let newList = state.wishlist.map((item)=>{
-                        if(item.id == action.payload.id){
-                            return{
-                                ...item,
-                                qty : item.qty + 1
-                            }           
-                        }
-                        return item
-                    })
-                    // console.log("list",newList);
-                    return {...state,wishlist : newList}
-                }
-            case "DEC_COUNT":
-                {
-                    let newList = state.wishlist.map((item)=>{
-                        if(item.id == action.payload.id){
-                            return{
-                                ...item,
-                                qty : item.qty - 1
-                            }           
-                        }
-                        return item
-                    })
-                    // console.log("list",newList);
-                    return {...state,wishlist : newList}
-                }
-        default :
-        return state;
+  switch (action.type) {
+    case "ADD_TO_WISHLIST": {
+      state.wishlist = state.wishlist.filter(
+        (item) => item.id !== action.payload.id
+      );
+      return {
+        ...state,
+        wishlist: [...state.wishlist, action.payload],
+      };
     }
-}
+    case "REMOVE_TO_WISHLIST":
+      const data = state.wishlist.filter((e) => e.id !== action.payload);
+      return {
+        ...state,
+        wishlist: data,
+      };
+    case "INC_COUNT": {
+      let newList = state.wishlist.map((item) => {
+        if (item.id == action.payload.id) {
+          return {
+            ...item,
+            qty: item.qty + 1,
+          };
+        }
+        return item;
+      });
+      // console.log("list",newList);
+      return { ...state, wishlist: newList };
+    }
+    case "DEC_COUNT": {
+      let newList = state.wishlist;
+      if (action.payload.qty !== 1) {
+        newList = state.wishlist.map((item) => {
+          if (item.id == action.payload.id) {
+            return {
+              ...item,
+              qty: item.qty - 1,
+            };
+          }
+          return item;
+        });
+        // console.log("list",newList);
+      }
+      return { ...state, wishlist: newList };
+    }
+    default:
+      return state;
+  }
+};

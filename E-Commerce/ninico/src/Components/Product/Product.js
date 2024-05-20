@@ -3,6 +3,9 @@ import productData from "./ProductData";
 import "./Product.css";
 import { ProductTable } from "./ProductTable";
 
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 export const Product = () => {
 
   return (
@@ -35,6 +38,7 @@ export const Product = () => {
           );
         })}
       </div>
+      <ToastContainer position="bottom-right" autoClose={1000} theme="colored"/>
     </div>
   );
 };

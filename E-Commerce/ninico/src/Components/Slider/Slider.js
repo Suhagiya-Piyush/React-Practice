@@ -18,6 +18,7 @@ import banner3 from "../Assets/banner-3.jpg";
 import ban1 from "../Assets/banner-slider-01.jpg";
 import ban2 from "../Assets/banner-slider-02.jpg";
 import "../Slider/Slider.css";
+import { Link } from "react-router-dom";
 
 export const Slider = () => {
   return (
@@ -53,9 +54,11 @@ export const Slider = () => {
               Up To <span className="text-red-600">40% Off</span> Latest
             </h2>
             <h2 className="text-5xl font-bold pb-2">Creations</h2>
+            <Link to="/shop">
             <button className="bg-white py-3 px-8 mt-4 font-bold rounded-lg text-sm hover:bg-red-600  hover:text-white ban-btn">
               Shop Now <i class="fa-solid fa-arrow-right ms-4 text-xs"></i>
             </button>
+            </Link>
           </div>
         </div>
         <div className="col-span-1 mt-2 lg:mt-0">

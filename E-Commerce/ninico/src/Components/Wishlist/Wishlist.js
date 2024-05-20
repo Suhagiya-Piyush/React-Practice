@@ -29,7 +29,7 @@ export const Wishlist = () => {
     <div>
       <PageHeading goBacklink="Home" pageTitle="Wishlist" />
       <div className="table-content px-10">
-        <table className="table-auto w-full border my-20">
+        <table className="table-auto w-full border mt-20">
           <thead>
             <tr className="border">
               <th className="border">Images</th>
@@ -96,6 +96,13 @@ export const Wishlist = () => {
             })}
           </tbody>
         </table>
+        <div className="text-center my-12">
+          <Link to="/">
+            <button className="border bg-rose-600 py-3 px-8 text-white font-semibold rounded-lg">
+              Back to Home
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

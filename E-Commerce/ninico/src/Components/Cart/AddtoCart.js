@@ -10,6 +10,7 @@ import { dec_Qty } from "../Action/Action";
 import { RemoveItem } from "../Action/Action";
 
 import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export const AddtoCart = () => {
   const data = useSelector((state) => state.cartreducer.carts);
@@ -30,7 +31,7 @@ export const AddtoCart = () => {
       <Header />
       <PageHeading goBacklink="Home" pageTitle="Add To Cart" />
       <div className="table-content px-10">
-        <table className="table-auto w-full border my-20">
+        <table className="table-auto w-full border mt-20">
           <thead>
             <tr className="border">
               <th className="border">Images</th>
@@ -64,22 +65,37 @@ export const AddtoCart = () => {
                     <span className="flex border px-4 py-2 rounded-lg">
                       {qty}
                       <div className="ms-auto my-auto hover:bg-gray-400">
-                        <button className="block border border-white" onClick={() => incCount(currentVal)}>
+                        <button
+                          className="block border border-white"
+                          onClick={() => incCount(currentVal)}
+                        >
                           <MdArrowDropUp />
                         </button>
-                        <button className="block border border-white" onClick={() => decCount(currentVal)}>
+                        <button
+                          className="block border border-white"
+                          onClick={() => decCount(currentVal)}
+                        >
                           <MdArrowDropDown />
                         </button>
                       </div>
                     </span>
                   </td>
                   <td className="border text-center">${qty * rate}</td>
-                  <td className="border text-center"><button onClick={() => Remove(id)}>Remove</button></td>
+                  <td className="border text-center">
+                    <button onClick={() => Remove(id)}>Remove</button>
+                  </td>
                 </tr>
               );
             })}
           </tbody>
         </table>
+        <div className="text-center my-12">
+          <Link to="/">
+            <button className="border bg-rose-600 py-3 px-8 text-white font-semibold rounded-lg">
+              Back to Home
+            </button>
+          </Link>
+        </div>
       </div>
       <Footer />
     </div>
