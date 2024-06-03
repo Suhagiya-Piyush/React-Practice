@@ -1,0 +1,603 @@
+FRONTEND TECHNICAL APTITUDE BASED QUESTION FOR INTERVIEW
+
+HTML :
+(1)   What is HTML?
+->HTML, or HyperText Markup Language, is the standard language used to create and design documents on the World Wide Web. It provides the structure and layout for web pages by using a system of tags and attributes to define elements such as headings, paragraphs, links, images, and more. HTML documents are interpreted by web browsers, which render them into the visual pages you see when browsing the internet. It forms the backbone of web development and is often combined with CSS (Cascading Style Sheets) and JavaScript to create dynamic and visually appealing websites.
+
+
+(2)   What are the different types of lists in HTML?
+->HTML lists come in three main categories: unordered lists, ordered lists, and definition lists. Each type serves a specific purpose and can be customized to fit your design and content needs.
+
+
+(3)   What is the purpose of the alt attribute in the <img> tag?
+->The required alt attribute specifies an alternate text for an image, if the image cannot be displayed. The alt attribute provides alternative information for an image if a user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
+
+
+(4)   What is the purpose of the <meta> tag in HTML?
+->The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data. <meta> tags always go inside the <head> element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.
+
+
+(5)   How do you create a hyperlink in HTML?
+->The <a> tag defines a hyperlink, which is used to link from one page to another. The most important attribute of the <a> element is the href attribute, which indicates the link's destination. By default, links will appear as follows in all browsers: An unvisited link is underlined and blue.
+
+
+(6)   What are semantic elements in HTML? Can you give some examples?
+->A semantic element clearly describes its meaning to both the browser and the developer.Examples of semantic elements: <form> , <table> , and <article> - Clearly defines its content.
+
+
+(7)   What is the purpose of the <!DOCTYPE html> declaration in HTML5?
+->The <! DOCTYPE html> declaration is used to inform a website visitor's browser that the document being rendered is an HTML document.
+
+
+
+(8)   Explain the difference between HTML elements and HTML tags.
+->HTML Tags usually exist in pairs consisting of a starting and an ending tag. However, some tags do not have a closing tag. HTML Elements contain a starting tag, content, and an ending tag. If there is no content in an HTML Element, it is called an Empty HTML Element.
+
+
+(9)   What is the purpose of the <head> tag in HTML?
+->The head tag is an HTML element used to define the head section of an HTML document. The head section contains metadata, which simply means data about data. This means information in the head tag is not displayed on the page but the information is used by browsers and by search engines.
+
+
+(10) What is the difference between inline and block-level elements in HTML?
+->Inline elements never start from a new line. Block elements cover space from left to right as far as it can go. Inline elements only cover the space as bounded by the tags in the HTML element. Block elements have top and bottom margins.
+
+
+(11)  Explain the difference between <div> and <span> tags.
+->A div element is used for block-level organization and styling of page elements, whereas a span element is used for inline organization and styling.
+
+
+(12)  What is the difference between the <br> tag and the <p> tag?
+->The <p> tag is used to indicate paragraphs. The <br> tag is used to insert line breaks, not to create paragraphs.
+
+
+(13)  How do you create a numbered list in HTML?
+->An ordered list is marked with the numbers by default. You can create an ordered list using the <ol></ol> tag and, define the list items using <li></li>. type="1"− This creates a numbered list starting from 1. type="A"− This creates a list numbered with uppercase letters starting from A.
+
+
+(14)  What is the purpose of the <table> tag in HTML?
+->The <table> HTML element represents tabular data—that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
+
+
+(15)   What is the purpose of the colspan and rowspan attributes in HTML tables?
+->In HTML, the rowspan attribute specifies how many rows a table cell should span, determining its vertical position. On the other hand, the colspan attribute specifies the number of columns a cell should span, determining its horizontal position.
+
+
+(16)  How do you embed a video in an HTML document?
+->To embed a video in an HTML document, use the <video> tag inside the body of the document.
+
+
+(17)  What is the purpose of the title attribute in HTML?
+->The title attribute in HTML is used to provide additional information about an element. When you hover over an element that has a title attribute set, most modern web browsers will display a tooltip containing the text of the title attribute.
+
+
+(18)   Explain the purpose of the href attribute in the <a> tag.
+->In HTML, the inline a (anchor) element denotes a hyperlink from one web address to another. All functional a elements must contain the href (hypertext reference) attribute inside the opening a tag. The href attribute indicates the destination of the hyperlink. Without the href attribute, the a element won't work.
+
+
+(19)  How do you create a form in HTML?
+->The <form> tag is used to create an HTML form for user input. The <form> element can contain one or more of the following form elements: <input> <textarea>
+
+
+(20)  What is the file extension of the html file ?
+->The two most used extensions of HTML documents are . html and . htm.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*    CSS :
+(1)   What is CSS?
+->CSS is the acronym of “Cascading Style Sheets”. CSS is a computer language for laying out and structuring web pages (HTML or XML). 
+
+
+(2)   What are the advantages of using CSS?
+->CSS offers several advantages, including improved website aesthetics, easy updates across multiple pages, faster loading times, and the ability to create responsive designs that adapt to various devices.
+
+
+(3)   Explain the difference between inline, internal, and external CSS.
+->Inline styles increase the HTML file size, which can affect the page load time. Internal styles are part of the HTML file, which increases the file size. External styles are in a separate file, which reduces the HTML file size and can be cached for faster page loads.
+
+
+(4)   How do you include CSS in your HTML file?
+->To link the CSS to an HTML file, we use the <link> tag inside the HTML <head> section. Your CSS file will look like the image displayed below: Let's look at another example where you add an image using CSS. Note: Make sure that the image file is in the same folder as the CSS and HTML files.
+
+
+(5)   What is a CSS selector? Give examples.
+->A CSS selector is a pattern used to select and style one or more HTML elements based on their attributes, types, classes, IDs, or relationships with other elements.
+1.Element Selector:
+2.Class Selector
+3.ID Selector
+4.Descendant Selector
+5.Adjacent Sibling Selector:
+6.Attribute Selector
+
+
+(6)   Explain the box model in CSS.
+->The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. It is used to create the design and layout of web pages. According to the CSS box model, the web browser supplies each element as a square prism.
+
+
+(7)   What is the purpose of the float property in CSS?
+->he float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to absolute positioning).
+
+
+(8)   What is the difference between display: none; and visibility: hidden;?
+->"display: none" removes the element from the layout, while "visibility: hidden" hides the element while preserving its position.
+
+
+(9)   How do you center an element horizontally and vertically in CSS?
+->To center both vertically and horizontally, use padding and text-align: center : I am vertically and horizontally centered.
+
+
+(10)What is the purpose of the z-index property in CSS?
+->z-index is the CSS property that controls the stacking order of overlapping elements on a page. An element with a higher z-index value will appear in front of an element with a lower z-index value. The property is called “z-index” because it sets the order of elements along the z-axis.
+
+
+(11)Explain the difference between padding and margin.
+->Margin is the space outside of a page element. Padding defines the space surrounding content within a web element. Margin controls the distance between separate elements on the page. Padding sets the distance between the content and the borders of its containing element.
+
+
+(12)What is the difference between inline and block elements?
+->Inline elements don't start in a new line. Block elements always start in a line. Inline elements allow other inline elements to sit behind.
+
+
+(13)What is the purpose of media queries in CSS?
+->Media queries are a key part of responsive web design, as they allow you to create different layouts depending on the size of the viewport, but they can also be used to detect other things about the environment your site is running on, for example whether the user is using a touchscreen rather than a mouse.
+
+
+(14)Explain the difference between position: static, position: relative, position: absolute, and position: fixed.
+->Static - this is the default value, all elements are in order as they appear in the document. Relative - the element is positioned relative to its normal position. Absolute - the element is positioned absolutely to its first positioned parent. Fixed - the element is positioned related to the browser window.
+
+
+(15)What is the purpose of the @import rule in CSS?
+->The @import rule allows you to import a style sheet into another style sheet. The @import rule must be at the top of the document (but after any @charset declaration). The @import rule also supports media queries, so you can allow the import to be media-dependent.
+
+
+(16)What is the purpose of the flexbox layout in CSS?
+->use flexbox is because you want to lay a collection of items out in one direction or another. As you lay out your items you want to control the dimensions of the items in that one dimension, or control the spacing between items.
+
+
+(17)What is the purpose of the grid layout in CSS?
+->The grid layout manager determines the size of individual components by dividing the free space in the container into equal-sized portions according to the number of rows and columns in the layout. The container's free space equals the container's size minus any insets and any specified horizontal or vertical gap.
+
+
+(18)Explain the difference between :before and :after pseudo-elements in CSS.
+->The ::after content is also “after” in source-order, so it will position on top of ::before if stacked on top of each other naturally.
+
+
+(19)What is the extension of the CSS file?
+->The external CSS is always saved with the . css extension, and through this file, we can change the complete style of our HTML web page.
+
+
+(20)How do you add a CSS animation to an element?
+->To add a CSS animation to an element, you can use the @keyframes rule to define the animation's keyframes (the stages of the animation), and then apply the animation to the element using the animation property. Here's a step-by-step guide:
+
+1.Define the Keyframes: Use the @keyframes rule to define the animation's keyframes. Keyframes are the stages of the animation, specifying styles at different points in time.
+2.Apply the Animation: Use the animation property to apply the animation to the element you want to animate. You specify the name of the animation, its duration, timing function, delay, and iteration count.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tailwind Css:
+
+1.What is Tailwind CSS and why is it gaining popularity among developers?
+->Tailwind CSS is a CSS framework that helps developers in the rapid designing of the web without shifting back and forth between different pages for HTML and CSS. Tailwind CSS doesn't come with pre-designed components, rather it provides set of utility classes that can be used to style HTML elements directly.
+
+
+2.Explain the utility-first approach in Tailwind CSS and its advantages.
+->Utility-first CSS frameworks like Tailwind CSS provide a rich set of responsive and interactive classes, such as hover and focus, to enhance the user experience. These classes allow you to define styles that react to user interactions or adapt to different screen sizes.
+
+
+3.How does the utility-first approach differ from traditional CSS frameworks?
+->Tailwind CSS's utility-first framework simplifies the web development process by reducing the need to write CSS or custom CSS. This approach leads to a learning curve that is remarkably short compared to traditional CSS frameworks, making it accessible for both new and experienced web developers.
+
+
+4.Can you give examples of some common utility classes in Tailwind CSS and their purposes?
+->Tailwind's flexbox and padding utilities ( flex , shrink-0 , and p-6 ) to control the overall card layout. The max-width and margin utilities ( max-w-sm and mx-auto ) to constrain the card width and center it horizontally.
+
+5.How does Tailwind CSS help in creating responsive designs?
+->Tailwind provides five default breakpoints, which are associated with common device resolutions. By default, Tailwind classes are applicable to devices having less than 640px width. Now, You can add different style properties for different breakpoints such as sm(640px), md(768px), lg(1024px), xl(1280px), 2xl(1536px).
+
+
+6.Can you provide an example of how you would make a button responsive using Tailwind CSS?
+->Tailwind uses a "mobile-first" approach. So classes without prefixes apply to the smallest screen size. You can use max-sm:bg-red-100, max-md:px-2, max-[360px]:py-1, min-2xl:border sm:120px Also, it is better to use className = 'container mx-auto' for responsive design.
+
+
+7.What is a Tailwind CSS configuration file and why is it useful?
+->The Tailwind config file is a file that contains all the configuration options for your Tailwind CSS framework. In this file, you can customize things like the colors, fonts, and sizes of your elements, you can also add TailwindCSS plugins and much more.
+
+
+8.Have you ever customized the default configuration in Tailwind CSS? If so, for what purpose?
+->Tailwind will look for an optional tailwind.config.js file at the root of your project where you can define any customizations. Every section of the config file is optional, so you only have to specify what you'd like to change. Any missing sections will fall back to Tailwind's default configuration.
+
+
+9.How can Tailwind CSS be integrated into a web project?
+->1.Install Tailwind CSS: Use npm or yarn to install Tailwind CSS.
+2.Create Configuration: Run npx tailwindcss init to generate a config file.
+3.Include Tailwind CSS: Import Tailwind CSS in your main CSS file.
+4.Build Process: Configure your build tool (like Webpack) to process CSS files.
+5.Usage: Start using Tailwind CSS utility classes in your HTML or component templates.
+6.Optional Customization: Customize Tailwind CSS by editing the config file.
+7.Optional Purge CSS: Optimize CSS bundle size by configuring PurgeCSS.
+
+
+8.Have you used Tailwind CSS with any frontend frameworks like React or Vue.js? If yes, how?
+->1.React:
+
+Install Tailwind CSS in your React project.
+Import Tailwind CSS in your main CSS file or component.
+Start using Tailwind CSS utility classes in your JSX.
+You can also use Tailwind CSS with styled-components or Emotion for more flexibility.
+2.Vue.js:
+
+Install Tailwind CSS in your Vue.js project.
+Import Tailwind CSS in your main CSS file or component.
+Start using Tailwind CSS utility classes in your Vue components' template.
+You can also use Tailwind CSS with Vue CLI or Nuxt.js for easier integration and configuration.
+
+
+9.How does Tailwind CSS impact the performance of a website?
+->1.Positive Impact:
+
+Reduced Development Time: Tailwind's utility-first approach can speed up development by providing pre-built styles.
+Smaller CSS File Size: Tailwind's utility classes allow for more concise CSS, potentially resulting in smaller file sizes.
+Optimized for Production: When configured with PurgeCSS, Tailwind removes unused styles, further reducing CSS file size.
+2.Negative Impact:
+
+Initial Overhead: Including the entire Tailwind CSS library can add initial overhead to page load times.
+Learning Curve: There might be a learning curve for developers not familiar with the utility-first approach.
+Increased HTML Size: Using many utility classes in HTML can increase file size, though this impact is usually minimal.
+
+
+10.What are some tips for optimizing performance when using Tailwind CSS?
+->Understanding the Utility-First Concept.
+Embracing Responsive Design.
+Implementing the 'Groups' Feature.
+Purge Unused Styles.
+Customizing Tailwind Configuration.
+Combining Utilities with @apply.
+Optimize Images and Media.
+
+
+11.What resources would you recommend to someone who wants to learn Tailwind CSS?
+->1.Official Documentation: Tailwind's documentation is comprehensive and beginner-friendly, covering everything from installation to advanced customization.
+
+2.Video Tutorials: Platforms like YouTube offer numerous video tutorials ranging from introductory overviews to in-depth guides on using Tailwind CSS with various frontend frameworks.
+
+3.Online Courses: Websites like Udemy, Coursera, and Egghead.io offer structured courses specifically focused on learning Tailwind CSS.
+
+4.Community Forums: Joining communities like the Tailwind CSS Discord server or Reddit's r/tailwindcss can provide valuable insights, tips, and support from fellow developers.
+
+5.Books and eBooks: Look for books or eBooks dedicated to Tailwind CSS, which can offer structured learning paths and in-depth explanations.
+
+
+12.What is the naming convention used in Tailwind CSS utility classes?
+->1.Prefixes:
+
+Utility categories: Classes are prefixed with letters indicating the category they belong to, like text- for text-related utilities and bg- for background utilities.
+Responsive prefixes: Classes can be made responsive using prefixes like sm: for small screens, md: for medium screens, etc.
+2.Utility Names:
+
+Descriptive names: Utility classes describe the property they modify, such as text-red-500 for setting text color to red-500 and p-4 for setting padding to 4 units.
+
+
+13.How does Tailwind CSS ensure consistency in class naming?
+->1.Standardization: It follows a consistent naming pattern across all utility classes, making them predictable and easy to remember.
+
+2.Documentation: Clear and comprehensive documentation provides guidelines on how to use each utility class correctly, promoting consistent usage.
+
+3.Community Standards: Tailwind CSS has an active community that promotes best practices and consistency in class naming through discussions, examples, and contributions.
+
+4.Codebase Maintenance: Tailwind CSS is actively maintained by its creators, who ensure that new additions to the framework adhere to existing naming conventions.
+
+
+14.How can you apply conditional styling in Tailwind CSS?
+->Tailwind lets you conditionally apply utility classes in different states using variant modifiers. For example, use hover:before:content-['Hovering'] to only apply the before:content-['Hovering'] utility on hover.
+
+
+15.Provide an example of using conditional classes in Tailwind CSS.
+-><button class="bg-blue-500 @if($isActive) hover:bg-blue-700 @else hover:bg-gray-300 @endif text-white font-bold py-2 px-4 rounded">
+  Click me
+</button>
+
+
+16.How does Tailwind CSS handle spacing and sizing?
+->Tailwind CSS uses a systematic scale of utility classes for spacing and sizing, offering precise control over margins, padding, widths, and heights. It follows a numeric scale where each unit represents 0.25rem (approximately 4px in most browsers), providing consistency and flexibility in layout design.
+
+
+17.Can you explain the difference between margin and padding utilities in Tailwind CSS?
+-> a margin is the space around an element's border, while padding is the space between an element's border and the element's content. Put another way, the margin property controls the space outside an element, and the padding property controls the space inside an element.
+
+
+18.How does Tailwind CSS manage colors?
+->Tailwind CSS comes with a wide variety of predefined colors. Each color has different shades, ranging from 100 (lightest) to 900 (darkest). You can use these colors and shades by adding the corresponding utility classes to your HTML elements.
+
+
+19.Does Tailwind CSS provide utilities for Flexbox and Grid layout?
+->Yes, Tailwind CSS does provide utilities for both Flexbox and Grid layout. It offers a comprehensive set of utility classes that enable you to quickly create flexible layouts using Flexbox and precise grid-based layouts using CSS Grid.
+
+
+20.Explain how you would create a responsive grid layout using Tailwind CSS.
+->
+To create a responsive grid layout using Tailwind CSS, you can use the grid utility classes provided by Tailwind. Here's a brief overview of the steps:
+
+1.Start by defining a container for your grid layout.
+2.Use the grid utility classes (grid, grid-cols-{number}, grid-rows-{number}, etc.) to define the layout of your grid.
+3.Utilize responsive breakpoints (sm:, md:, lg:, xl:) to adjust the grid layout based on screen size.
+
+For example:
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+  <!-- Your grid items here -->
+  <div class="bg-gray-200 p-4">1</div>
+  <div class="bg-gray-200 p-4">2</div>
+  <div class="bg-gray-200 p-4">3</div>
+</div>
+
+
+21.How can you apply hover and focus states to elements in Tailwind CSS?
+->You can apply hover and focus states to elements in Tailwind CSS using the hover: and focus: variants respectively, followed by the utility classes you want to apply. For example:
+<button class="bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+  Button
+</button>
+
+
+22.Provide an example of adding hover effects to a button using Tailwind CSS.
+->example:
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+  Hover Me
+</button>
+
+
+
+23.What text styling utilities are available in Tailwind CSS?
+->Tailwind CSS provides a wide range of text styling utilities, including classes for text color, font size, font weight, text alignment, text decoration, and more. Some of the key text styling utilities include:
+
+1.Text color: text-{color}
+2.Font size: text-{size}
+3.Font weight: font-{weight}
+4.Text alignment: text-{align}
+5.Text decoration: underline, line-through, no-underline
+6.Text transformation: uppercase, lowercase, capitalize
+
+
+24.How would you create a custom text style using Tailwind CSS?
+->example:
+<p class="text-lg font-bold text-blue-600 leading-7 tracking-wide">
+  Custom Text Style
+</p>
+
+1.text-lg: Sets the font size to large.
+2.font-bold: Applies a bold font weight.
+3.text-blue-600: Specifies a shade of blue for the text color.
+4.leading-7: Adjusts the line height to provide spacing between lines.
+5.tracking-wide: Adds extra letter spacing for improved readability.
+
+
+25.Discuss the concept of component reusability in Tailwind CSS.
+->component reusability refers to the ability to create modular and reusable UI components by composing utility classes provided by Tailwind. By breaking down UI elements into smaller, self-contained components, you can build a library of reusable pieces that can be easily combined and customized to create new layouts and designs.
+
+Key aspects of component reusability in Tailwind CSS include:
+1.Modularity: Components are designed to be modular, meaning they encapsulate a specific piece of functionality or visual appearance.
+
+2.Composition: Components are composed of utility classes provided by Tailwind CSS. These classes define the styling and layout of the component.
+
+3.Customization: Components can be easily customized by adjusting or adding utility classes to modify their appearance or behavior.
+
+4.Encapsulation: Components encapsulate their styles, ensuring that styles are scoped to the component and do not affect other parts of the application.
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*   Javascript :
+(1)   What is JavaScript?
+->JavaScript is a programming language that is primarily used for creating interactive web pages and web applications.
+
+
+(2)   What are the key features of JavaScript?
+->1.Scripting Language
+2.Interpreter Based
+3.Validation of User’s Input
+4.Ability to Perform In-build Function
+5.Case Sensitive Format
+6.Light Weight and Delicate
+7.Statements Looping
+8.Case Sensitive
+9.Control Statements
+10.Dynamic T	yping
+11.Async Processing
+12.Prototype-based
+
+(3)   What is the difference between var, let, and const in JavaScript?
+->var has function scope and can be redeclared and reassigned.
+ let has block scope and can be reassigned but not redeclared.
+ const has block scope and cannot be redeclared or reassigned
+
+
+(4)   Explain the difference between == and === in JavaScript.
+->== checks the value and === checks the value and type
+
+
+(5)   What is a closure in JavaScript?
+->A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function.
+
+
+(6)   Explain the concept of hoisting in JavaScript.
+->Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+
+
+(7)   What are the different data types in JavaScript?
+->1.String.
+2.Number.
+3.Bigint.
+4.Boolean.
+5.Undefined.
+6.Null.
+7.Symbol.
+8.Object.
+
+
+(8)   How do you declare and define a function in JavaScript?
+->A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses (). Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+
+(9)   What is the purpose of the this keyword in JavaScript?
+->“This” keyword refers to an object that is executing the current piece of code. It references the object that is executing the current function. If the function being referenced is a regular function, “this” references the global object.
+
+
+(10) What is the difference between null and undefined in JavaScript?
+->undefined means a variable has been declared but has not yet been assigned a value, whereas null is an assignment value, meaning that a variable has been declared and given the value of null .
+
+
+(11) How do you handle errors in JavaScript?
+->1.try...catch Statement
+2.throw Statement
+
+
+(12) How to swap two number in JavaScript without using third variable
+->a = a + b;
+b = a - b;
+a = a - b;
+
+console.log("After swapping:");
+console.log("a =", a);
+console.log("b =", b);
+
+or
+
+let a = 1;
+let b = 2;
+
+// Using destructuring assignment to swap values
+[a, b] = [b, a];
+
+console.log("a:", a); // Should output 2
+console.log("b:", b); // Should output 1
+
+
+
+(13) Explain the difference between synchronous and asynchronous programming in JavaScript.
+->Asynchronous code allows the program to be executed immediately whereas the synchronous code will block further execution of the remaining code until it finishes the current one. This may not look like a big problem but when you see it in a bigger picture you realize that it may lead to delaying the User Interface.
+
+
+(14) What is the purpose of the Promise object in JavaScript?
+->The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. To learn about the way promises work and how you can use them, we advise you to read Using promises first.
+
+
+(15)How do you handle asynchronous operations in JavaScript?
+->To manage the promise and return the result of the incrementDigits() asynchronous operation, use the . then()` method. If an error condition arises inside a promise, you “reject” the promise by calling the reject() function with an error. To handle a promise rejection, you pass a callback to the catch() function.
+
+
+(16) What is a callback function in JavaScript?
+->A JavaScript callback is a function which is to be executed after another function has finished execution. A more formal definition would be - Any function that is passed as an argument to another function so that it can be executed in that other function is called as a callback function.
+
+
+(17) What are arrow functions in JavaScript?
+->An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage: Arrow functions don't have their own bindings to this , arguments , or super , and should not be used as methods.
+
+
+(18) What is the purpose of the map, filter, and reduce functions in JavaScript?
+->map method returns an entire new array.filter method It creates a new array with all elements that pass the condition.and The array reduce in JavaScript is a predefined method used to reduce an array to a single value by passing a callback function on each element of the array.
+
+
+
+(19) What is the purpose of the async and await keywords in JavaScript?
+->1.async: When you declare a function with the async keyword, it means that the function will always return a promise. This allows you to use the await keyword inside that function to wait for promises to resolve before proceeding further. Essentially, async functions enable you to write asynchronous code that looks and behaves more like synchronous code.
+2.await: The await keyword can only be used inside an async function. It is used to pause the execution of an async function until a promise is settled (either resolved or rejected), and to unwrap the value of the fulfilled promise. This helps in avoiding nested callbacks or complex promise chaining, making asynchronous code more readable and easier to understand.
+
+
+ (20) What is main difference between filter and find method ?
+->find method is  It returns the first element that matches a condition and filter method It creates a new array with all elements that pass the condition.
+
+
+(21)differnce between for-each and map
+->The for-each method returns undefine and the map method returns an entire new array.
+
+(22)what is variable
+->Variables are containers for storing information
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  	React JS :
+(1)   What is React.js?
+->React.js is an open-source JavaScript library for building interactive user interfaces.
+
+
+(2)   What is JSX in React.js?
+->JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React.
+
+
+(3)   What are components in React.js?
+->Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.React app, every piece of UI is a component. React components are regular JavaScript functions except: Their names always begin with a capital letter. They return JSX markup.
+
+
+(4)   How do you create a functional component in React.js?
+->We can create a functional component in React by writing a JavaScript function. These functions may or may not receive data as parameters. In the functional Components, the return value is the JSX code to render to the DOM tree.
+
+
+(5)   What are props in React.js?
+->Props is a special keyword in React that stands for properties and is used for passing data from one component to another. Data with props are passed in a unidirectional flow from parent to child.
+
+
+(6)   What is the purpose of the key attribute in React.js?
+->In React.js, the key attribute is a special attribute that is used to uniquely identify components or elements in a collection of sibling elements. It is primarily used when rendering arrays of components or elements, such as when using the map() function to generate a list of items.
+
+
+(7)   Explain the component lifecycle in React.js.
+->Every React component goes through the same lifecycle: A component mounts when it's added to the screen. A component updates when it receives new props or state, usually in response to an interaction. A component unmounts when it's removed from the screen.
+
+
+
+(8)   What is the purpose of the useState hook in React.js?
+->useState is React Hook that allows you to add state to a functional component. It returns an array with two values: the current state and a function to update it. The Hook takes an initial state value as an argument and returns an updated state value whenever the setter function is called.
+
+
+(9)   What is the purpose of the useEffect hook in React.js?
+->useEffect hook is used to handle side effects in functional components, such as fetching data, updating the DOM, and setting up subscriptions or timers. It is used to mimic the lifecycle methods of class-based components.
+
+
+(10) What are controlled components in React.js?
+->>React's Controlled Components manage form data via component state, receiving values through props and updating through callbacks like onChange. The parent component maintains the state, passing updated values as props to the controlled component.
+
+
+(11) What are uncontrolled components in React.js?
+->controlled components in React are those where the form data is handled by the DOM itself, not by the state within your component. In essence, they're a bit like traditional HTML form inputs. When you need to get your hands on the value, you reach out directly to the DOM to fetch it.
+
+
+(12) What is the purpose of the useContext hook in React.js?
+->The useContext hook is used to consume values from a React context. Context provides a way to pass data through the component tree without having to pass props manually at every level.
+
+
+(13) What is the purpose of the useReducer hook in React.js?
+->The useReducer Hook is used to store and update states, just like the useState Hook. It accepts a reducer function as its first parameter and the initial state as the second. useReducer returns an array that holds the current state value and a dispatch function to which you can pass an action and later invoke it.
+
+
+(14) What is Redux and how does it relate to React.js?
+->Redux is a open source javascript library for managing and controlling wole data.redux is unidirection.
+
+
+(15) How do you perform routing in React.js?
+->Routing in React.js allows you to navigate between different views or pages in a single-page application (SPA) without a full page reload. The most commonly used library for routing in React.js is React Router. 
+
+
+(16) What is the virtual DOM in React.js?
+->The virtual DOM is a lightweight copy of the actual DOM maintained by React. It allows React to perform efficient updates and minimize direct manipulations to the real DOM. React compares the virtual DOM with the previous version and updates only the necessary parts, improving performance.
+
+
+(17) What are React.js fragments?
+->React Fragment is a feature in React that allows you to return multiple elements from a React component by allowing you to group a list of children without adding extra nodes to the DOM. To return multiple elements from a React component, you'll need to wrap the element in a root element.
+
+
+(18) How do you handle events in React.js?
+->Handling events in React involves defining event handlers that respond to specific user actions, such as a mouse click or a keyboard input. In React, events are handled using synthetic events, which are a cross-browser wrapper around the native browser events.
+
+
+(19) What is the purpose of the memo function in React.js?
+->useMemo Hook returns a memoized value and prevents the application from unnecessary re-renders. 
+
+
+(20) What are higher-order components (HOCs) in React.js?
+->A higher-order component is a function that takes in a component and returns a new component. 
+	Reason to use Higher-Order component:
+		1.Easy to handle
+		2.Get rid of copying the same logic in every component
+		3.Makes code more readable
+
