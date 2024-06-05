@@ -10,7 +10,7 @@
     },
     {
       "id": "d08c",
-      "FirstName": "Kenidd",
+      "FirstName": "Keni",
       "LastName": "Kakadiya",
       "Title": "Front-end Developer",
       "Age": "18",
@@ -22,6 +22,22 @@
       "LastName": "Suhagiya",
       "Title": "Full-Stack Developer",
       "Age": "28",
+      "City": "Surat"
+    },
+    {
+      "id": "d856",
+      "FirstName": "Sahil",
+      "LastName": "Dudhat",
+      "Title": "Full-Stack Developer",
+      "Age": "22",
+      "City": "Vadodara"
+    },
+    {
+      "id": "9a2a",
+      "FirstName": "Jayan",
+      "LastName": "Dudakiya",
+      "Title": "Web Developer",
+      "Age": "24",
       "City": "Surat"
     }
   ]

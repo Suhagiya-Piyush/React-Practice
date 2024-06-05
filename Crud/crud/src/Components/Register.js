@@ -1,51 +1,83 @@
-import React, { useState } from 'react'
-import { ArrowRight } from 'lucide-react'
+import React from "react";
+import { ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
-
+const SignupSchema = Yup.object({
+  name: Yup.string().required("Name is Required!"),
+  email: Yup.string().email("Invalid Email").required("Email is Required"),
+  password: Yup.string()
+    .min(5, "Password is Too Short!")
+    .max(12, "Password is Too Long!")
+    .required("Password is Required"),
+});
 
 export function Register() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [pass, setPass] = useState("");
   const navigate = useNavigate();
 
-  const signIN = (e) => {
-    e.preventDefault();
-    if(!name || !email || !pass){
-      alert("Fill all Data!!");
-    }else{
-      handleClick();
-      localStorage.setItem("Name", name);
-      localStorage.setItem("Email", email);
-      localStorage.setItem("Password", pass);
-      navigate("/");
-    }
-  }
-  const blank = () => {
-    Swal.fire({
-      icon: "warning",
-      title: "All Data Not Fill!!!",
-      text: "Fill all Data!"
+  // const signIN = (e) => {
+  //   e.preventDefault();
+  //   if(!name || !email || !pass){
+  //     blank();
+  //   }else{
+  //     handleClick();
+  //     localStorage.setItem("Name", name);
+  //     localStorage.setItem("Email", email);
+  //     localStorage.setItem("Password", pass);
+  //     navigate("/");
+  //   }
+  // }
+
+  const { values, handleSubmit, handleChange, errors, touched, handleBlur } =
+    useFormik({
+      initialValues: {
+        name: "",
+        email: "",
+        password: "",
+      },
+      validationSchema: SignupSchema,
+      onSubmit: (value) => {
+        // e.preventDefault();
+        handleClick();
+        localStorage.setItem("Name", value.name);
+        localStorage.setItem("Email", value.email);
+        localStorage.setItem("Password", value.password);
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
+      },
     });
-  }
+
+  // const blank = () => {
+  //   Swal.fire({
+  //     icon: "warning",
+  //     title: "All Data Not Fill!!!",
+  //     text: "Fill all Data!",
+  //   });
+  // };
   const handleClick = () => {
     Swal.fire({
       icon: "success",
       title: "User Registration Successfully!",
-      text: "You clicked the button!"
+      text: "You clicked the button!",
     });
-  }
+  };
 
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
           <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">Sign up</h2>
+            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
+              Sign up
+            </h2>
             <p className="mt-2 text-base text-gray-600">
-              Already have an account?{' '}
+              Already have an account?{" "}
               <Link
                 to="/"
                 title=""
@@ -54,50 +86,88 @@ export function Register() {
                 Log In
               </Link>
             </p>
-            <form action="#" method="POST" className="mt-8" onSubmit={signIN}>
+            <form
+              action="#"
+              method="POST"
+              className="mt-8"
+              onSubmit={handleSubmit}
+            >
               <div className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="text-base font-medium text-gray-900">
-                    {' '}
-                    Full Name{' '}
+                  <label
+                    htmlFor="name"
+                    className="text-base font-medium text-gray-900"
+                  >
+                    {" "}
+                    Full Name{" "}
                   </label>
                   <div className="mt-2">
-                    <input onChange={(e) => setName(e.target.value)}
+                    <input
+                      // onChange={(e) => setName(e.target.value)}
+                      name="name"
+                      value={values.name}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="text"
                       placeholder="Full Name"
                       id="name"
                     ></input>
+                    {touched.name && errors.name ? (
+                      <p style={{ color: "red" }}>{errors.name}</p>
+                    ) : null}
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="email" className="text-base font-medium text-gray-900">
-                    {' '}
-                    Email address{' '}
+                  <label
+                    htmlFor="email"
+                    className="text-base font-medium text-gray-900"
+                  >
+                    {" "}
+                    Email address{" "}
                   </label>
                   <div className="mt-2">
-                    <input onChange={(e) => setEmail(e.target.value)}
+                    <input
+                      // onChange={(e) => setEmail(e.target.value)}
+                      name="email"
+                      value={values.email}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="email"
                       placeholder="Email"
                       id="email"
                     ></input>
+                    {touched.email && errors.email ? (
+                      <p style={{ color: "red" }}>{errors.email}</p>
+                    ) : null}
                   </div>
                 </div>
                 <div>
                   <div className="flex items-center justify-between">
-                    <label htmlFor="password" className="text-base font-medium text-gray-900">
-                      {' '}
-                      Password{' '}
+                    <label
+                      htmlFor="password"
+                      className="text-base font-medium text-gray-900"
+                    >
+                      {" "}
+                      Password{" "}
                     </label>
                   </div>
                   <div className="mt-2">
-                    <input onChange={(e) => setPass(e.target.value)}
+                    <input
+                      // onChange={(e) => setPass(e.target.value)}
+                      name="password"
+                      value={values.password}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
                       placeholder="Password"
                       id="password"
                     ></input>
+                    {touched.password && errors.password ? (
+                      <p style={{ color: "red" }}>{errors.password}</p>
+                    ) : null}
                   </div>
                 </div>
                 <div>
@@ -155,5 +225,5 @@ export function Register() {
         </div>
       </div>
     </section>
-  )
+  );
 }
