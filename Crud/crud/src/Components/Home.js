@@ -2,21 +2,39 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import { Link } from 'react-router-dom';
 
-import { FaUserEdit  } from "react-icons/fa";
+import { FaUserEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { Pagination } from './Pagination';
 
 
 export function Home() {
   const [data, setData] = useState([]);
+  const [searchItem, setSearchItem] = useState("");
 
-  const loadUser = async() => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postparPage, setpostparPage] = useState(2);
+
+  const loadUser = async () => {
     const refrance = await axios.get("http://localhost:3001/student");
     setData(refrance.data)
   }
 
   useEffect(() => {
     loadUser();
-  },[])
+  }, [])
+
+  const lastIndex = currentPage * postparPage;// par page 1 * 2 = 2
+  const firstIndex = lastIndex - postparPage; // 2 - 2 = 0
+  const currentPost = data.slice(firstIndex, lastIndex);
+
+  const onDelete = (id) => {
+    axios.delete(`http://localhost:3001/student/${id}`)
+      .then((responce) => { loadUser(); })
+      .catch((error) => { alert("Item Not Deleted!!") })
+  }
+
+  const searchData = data.filter(user => user.FirstName.toLowerCase().includes(searchItem) || user.LastName.toLowerCase().includes(searchItem)) 
+
   return (
     <>
       <section className="mx-auto w-full max-w-7xl px-10 py-4">
@@ -27,6 +45,13 @@ export function Home() {
               This is a list of all Students. You can add new Students, edit or delete existing
               ones.
             </p>
+          </div>
+          <div className="flex grow justify-end">
+            <input onChange={(e) => setSearchItem(e.target.value)}
+              className="flex h-10 w-[250px] rounded-md bg-white px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 mx-4"
+              type="text"
+              placeholder="Serach"
+            ></input>
           </div>
           <div>
             <button
@@ -75,7 +100,7 @@ export function Home() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 bg-white">
-                    {data.map((student) => (
+                    {(searchItem === "" ? currentPost : searchData).map((student) => (
                       <tr key={student.id}>
                         <td className="whitespace-nowrap px-4 py-4">
                           <div className="flex items-center">
@@ -97,13 +122,16 @@ export function Home() {
                         </td>
                         <td className="whitespace-nowrap px-4 py-4 text-right text-sm font-medium">
                           <Link to={`/edit/${student.id}`}><button className="text-white border bg-green-500 py-2 px-6 rounded-lg mx-2 text-lg"> <FaUserEdit /></button></Link>
-                          
-                          <button className="border bg-rose-500 text-white py-2 px-6 rounded-lg mx-2 text-lg"> <MdDelete /></button> 
+
+                          <Link onClick={() => onDelete(student.id)} to=""><button className="border bg-rose-500 text-white py-2 px-6 rounded-lg mx-2 text-lg"> <MdDelete /></button></Link>
                         </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
+                <div className='my-4'>
+                  <Pagination totalPost={data.length} postparPage={postparPage} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+                </div>
               </div>
             </div>
           </div>
