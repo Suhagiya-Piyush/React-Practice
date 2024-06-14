@@ -14,6 +14,12 @@ export function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [postparPage, setpostparPage] = useState(2);
 
+  const selectPerPage = (e) => {
+    const value = parseInt(e.target.value);
+    setpostparPage(value);
+    setCurrentPage(1);
+  }
+
   const loadUser = async () => {
     const refrance = await axios.get("http://localhost:3001/student");
     setData(refrance.data)
@@ -129,8 +135,15 @@ export function Home() {
                     ))}
                   </tbody>
                 </table>
-                <div className='my-4'>
+                <div className='my-4 flex justify-center items-center'>
                   <Pagination totalPost={data.length} postparPage={postparPage} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+                  <select name="" id="" className='p-1 rounded-md outline outline-2 outline-green-600 ms-28' onChange={selectPerPage} value={postparPage}>
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                    <option value={4}>4</option>
+                    <option value={5}>5</option>
+                  </select>
                 </div>
               </div>
             </div>
