@@ -137,7 +137,7 @@ export function Home() {
                 </table>
                 <div className='my-4 flex justify-center items-center'>
                   <Pagination totalPost={data.length} postparPage={postparPage} setCurrentPage={setCurrentPage} currentPage={currentPage} />
-                  <select name="" id="" className='p-1 rounded-md outline outline-2 outline-green-600 ms-28' onChange={selectPerPage} value={postparPage}>
+                  <select name="" id="" className='p-1 px-2 rounded-md outline outline-2 outline-green-600 ms-28' onChange={selectPerPage} value={postparPage}>
                     <option value={1}>1</option>
                     <option value={2}>2</option>
                     <option value={3}>3</option>
